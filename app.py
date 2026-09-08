@@ -3,8 +3,18 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def home():
     return 'Hello, World!'
+
+#routing for the about page
+@app.route('/about')
+def about():
+    return 'This is the about page.'
+
+#routing for the contact page
+@app.route('/contact')
+def contact():
+    return 'This is the contact page.'
 
 
 if __name__ == '__main__':
